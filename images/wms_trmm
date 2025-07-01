@@ -1,0 +1,786 @@
+<?xml version='1.0' encoding="ISO-8859-1" standalone="no" ?>
+<!DOCTYPE WMT_MS_Capabilities SYSTEM "http://schemas.opengis.net/wms/1.1.1/WMS_MS_Capabilities.dtd"
+ [
+ <!ELEMENT VendorSpecificCapabilities EMPTY>
+ ]>  <!-- end of DOCTYPE declaration -->
+
+<WMT_MS_Capabilities version="1.1.1">
+
+<!-- MapServer version 5.4.1 OUTPUT=GIF OUTPUT=PNG OUTPUT=JPEG OUTPUT=WBMP OUTPUT=SVG SUPPORTS=PROJ SUPPORTS=FREETYPE SUPPORTS=ICONV SUPPORTS=WMS_SERVER SUPPORTS=WMS_CLIENT SUPPORTS=WFS_SERVER SUPPORTS=WFS_CLIENT SUPPORTS=WCS_SERVER SUPPORTS=SOS_SERVER INPUT=EPPL7 INPUT=POSTGIS INPUT=OGR INPUT=GDAL INPUT=SHAPEFILE -->
+
+<Service>
+  <Name>OGC:WMS</Name>
+  <Title>OGC WMS Server for TRMM Level 3 Data</Title>
+  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?"/>
+  <ContactInformation>
+    <ContactPersonPrimary>
+<!-- WARNING: Mandatory metadata '..._contactperson' was missing in this context. -->
+      <ContactOrganization>Goddard Earth Sciences Data and Information Services Center</ContactOrganization>
+    </ContactPersonPrimary>
+      <ContactVoiceTelephone>301-614-5224</ContactVoiceTelephone>
+  <ContactElectronicMailAddress>help-disc@listserv.gsfc.nasa.gov</ContactElectronicMailAddress>
+  </ContactInformation>
+</Service>
+
+<Capability>
+  <Request>
+    <GetCapabilities>
+      <Format>application/vnd.ogc.wms_xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetCapabilities>
+    <GetMap>
+      <Format>image/jpg</Format>
+      <Format>image/png</Format>
+      <Format>image/gif</Format>
+      <Format>image/vnd.wap.wbmp</Format>
+      <Format>image/tiff</Format>
+      <Format>image/svg+xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetMap>
+    <GetFeatureInfo>
+      <Format>text/plain</Format>
+      <Format>application/vnd.ogc.gml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetFeatureInfo>
+    <DescribeLayer>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?"/></Post>
+        </HTTP>
+      </DCPType>
+    </DescribeLayer>
+    <GetLegendGraphic>
+      <Format>image/jpg</Format>
+      <Format>image/png</Format>
+      <Format>image/gif</Format>
+      <Format>image/vnd.wap.wbmp</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetLegendGraphic>
+    <GetStyles>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetStyles>
+  </Request>
+  <Exception>
+    <Format>application/vnd.ogc.se_xml</Format>
+    <Format>application/vnd.ogc.se_inimage</Format>
+    <Format>application/vnd.ogc.se_blank</Format>
+  </Exception>
+  <VendorSpecificCapabilities />
+  <UserDefinedSymbolization SupportSLD="1" UserLayer="0" UserStyle="1" RemoteWFS="0"/>
+  <Layer>
+    <Name>GES_DISC_WMS_AG</Name>
+    <Title>OGC WMS Server for TRMM Level 3 Data</Title>
+    <SRS>EPSG:4326</SRS>
+    <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+    <BoundingBox SRS="EPSG:4326"
+                minx="-180" miny="-90" maxx="180" maxy="90" />
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>TRMM_3A11_MONTHLY</Name>
+        <Title>TRMM_3A11_MONTHLY</Title>
+        <Abstract>Algorithm 3A11 estimates monthly rain from the histogram of the brightness temperatures obtained from TMI calibration (1B11). This histogram is matched to a log-normally distributed rain rate distribution via a rain rate-brightness temperature relation. A beam-filling correction is applied to account for the non-uniformly filled field-of-view of the TMI sensor. Outputs are monthly surface rain rates and freezing heights for 5° x 5° grid boxes.</Abstract>
+        <KeywordList>
+          <Keyword>TRMM</Keyword>
+          <Keyword>EOSDIS</Keyword>
+          <Keyword>ATMOSPHERE</Keyword>
+          <Keyword>PRECIPITATION</Keyword>
+          <Keyword>PRECIPITATION RATE</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-40" maxx="180" maxy="40" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-40" maxx="180" maxy="40" />
+        <Dimension name="time" units="ISO8601"/>
+        <Extent name="time" default="2011-03-01" nearestValue="0">1997-12-01/2011-12-01</Extent>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="804" height="110">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=TRMM_3A11_MONTHLY&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>TRMM_3A12_V6_MONTHLY_surfrain</Name>
+        <Title>TRMM_3A12_V6_MONTHLY_surfrain</Title>
+        <Abstract>This document provides basic information on 3A12, TMI Monthly 0.5° x 0.5° Profiling. Algorithm 3A12 produces global 0.5° x 0.5° monthly gridded means using 2A12 data. Vertical hydrometeor profiles and surface rainfall means are computed. Various pixel counts are also reported. The granule size is one month.This document provides basic information on 3A12, TMI Monthly 0.5° x 0.5° Profiling. Algorithm 3A12 produces global 0.5° x 0.5° monthly gridded means using 2A12 data. Vertical hydrometeor profiles and surface rainfall means are computed. Various pixel counts are also reported. The granule size is one month. The average operating altitude for TRMM was changed from 350 to 403 km during the period of August 7-24, 2001. This orbit boost maneuver extended the mission life significantly. All post-boost data products had been released by the TRMM Science Project, as of early December 2001. All TRMM data products (post- and pre-boost) are available via the TRMM data search-and-order system at http://disc.gsfc.nasa.gov/data/datapool/TRMM_DP/01_Data_Products/02_Gridded/. The time period before August 7, 2001 is referred to as pre-boost, and the time period after August 24, 2001 is referred to as post-boost.</Abstract>
+        <KeywordList>
+          <Keyword>surface rain</Keyword>
+          <Keyword> cloud liquid water content</Keyword>
+          <Keyword> latent heat</Keyword>
+          <Keyword> NpixTotal</Keyword>
+          <Keyword> EOSDIS</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-40" maxx="180" maxy="40" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-40" maxx="180" maxy="40" />
+        <Dimension name="time" units="ISO8601"/>
+        <Extent name="time" default="2011-02-01" nearestValue="0">1997-12-01/2011-12-01</Extent>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="881" height="110">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=TRMM_3A12_V6_MONTHLY_surfrain&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>TRMM_3A25_V6_MONTHLY_surfrain</Name>
+        <Title>TRMM_3A25_V6_MONTHLY_surfrain</Title>
+        <Abstract>The primary objective of algorithm 3A25 is to compute various rainfall
+      statistics over a month from the level 2 PR products.  The statistics
+      are derived at two spatial resolutions: (1) a standard space scale of
+      5 degrees by 5 degrees (latitude x longitude) cells and (2) a high
+      resolution subset of 0.5 degree x 0.5 degree cells.
+
+      The output variables include rainfall rate (mm/hour) profile at 2, 4,
+      6, 10, and 15 km, fractional rain, snow ice layer, and surface rain
+      rate (mm/hour).  The output statistics include probabilities of
+      occurrence, means and standard deviations, histograms, and correlation
+      coefficients.
+
+      All statistics in 3A-25, except near-surface rain rate, are computed
+      only when rain is judged in 1C-21 to be &#39;certain.&#39;  When rain is
+      judged in 1C-21 to be &#39;possible,&#39; the observation is treated as a
+      &#39;no-rain&#39; observation.  For the near-surface rain rate, the statistics
+      (mean, standard deviation, and histogram) are computed for
+      &#39;rain-possible&#39; as for the usual &#39;rain-certain.&#39;  Because the
+      &#39;rain-possible&#39; cases are dominated by noise so that the probability
+      of false-alarm is high, the &#39;rain-certain&#39; statistics should be
+      considered as more representative of the TRMM radar data.
+
+      Three types of rain rates are defined in 3A-25: (1) a &#39;near-surface&#39;
+      rain rate that is obtained from the range bin closest to the surface
+      which is not corrupted by the surface clutter, (2) a path-averaged
+      rain rate calculated by summing the values from the storm top (first
+      gate where rain is detected) to the last gate (gate nearest to the
+      surface uncontaminated by surface clutter) and dividing by the number
+      of gates in the interval, and (3) those at fixed heights above the
+      ellipsoid (2, 4, 6, 10, and 15 km).
+
+      Spatial coverage is between 40 degrees North and 40 degrees South,
+      owing to the 35 degree inclination of the TRMM satellite.
+
+      The Tropical Rainfall Measuring Mission (TRMM) is a joint U.S.-Japan satellite
+      mission to monitor tropical and subtropical precipitation and to estimate its
+      associated latent heating. TRMM was successfully launched on November 27, at
+      4:27 PM (EST) from the Tanegashima Space Center in Japan.
+
+      The TRMM Precipitation Radar (PR), the first of its kind in space, is an
+      electronically scanning radar, operating at 13.8 GHz that measures the 3-D
+      rainfall distribution over both land and ocean, and defines the layer depth of
+      the precipitation.</Abstract>
+        <KeywordList>
+          <Keyword>EOSDIS</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-37" maxx="180" maxy="37" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-37" maxx="180" maxy="37" />
+        <Dimension name="time" units="ISO8601"/>
+        <Extent name="time" default="2011-02-01" nearestValue="0">1998-01-01/2011-12-01</Extent>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="755" height="110">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=TRMM_3A25_V6_MONTHLY_surfrain&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>TRMM_3A46_MONTHLY</Name>
+        <Title>TRMM_3A46_MONTHLY</Title>
+        <Abstract>      TRMM product 3A46 consists of monthly Special Sensor Microwave/Imager (SSM/I)
+      data averaged over 1° x 1° grid boxes and one month.
+
+      This orbit boost maneuver extended the mission life significantly. All
+      post-boost data products had been released by the TRMM Science Project, as of
+      early December 2001. All TRMM data products (post- and pre-boost) are available
+      via the TRMM data search-and-order system at
+      http://disc.sci.gsfc.nasa.gov/data/datapool/TRMM/01_Data_Products/02_Gridded/.</Abstract>
+        <KeywordList>
+          <Keyword>EARTH SCIENCE</Keyword>
+          <Keyword>ATMOSPHERE</Keyword>
+          <Keyword>PRECIPITATION</Keyword>
+          <Keyword>RAIN</Keyword>
+          <Keyword>PRECIPITATION RATE</Keyword>
+          <Keyword>TRMM</Keyword>
+          <Keyword> ESDIS</Keyword>
+          <Keyword> ESIP</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-40" maxx="180" maxy="40" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-40" maxx="180" maxy="40" />
+        <Dimension name="time" units="ISO8601"/>
+        <Extent name="time" default="2009-08-01" nearestValue="0">1997-12-01/2009-08-01</Extent>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="804" height="110">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=TRMM_3A46_MONTHLY&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>TRMM_3B31_MONTHLY</Name>
+        <Title>TRMM_3B31_MONTHLY</Title>
+        <Abstract>      The TRMM Microwave Imager (TMI) is a nine-channel passive microwave radiometer
+      which builds on the heritage of the Special Sensor Microwave/Imager (SSM/I)
+      instrument.  It is flown aboard the Defense Meteorological Satellite Program
+      (DMSP)
+      platforms.
+
+
+      The TRMM Precipitation Radar (PR), the first of its kind in space, is an
+      electronically scanning radar, operating at 13.8 GHz that measures the 3-D
+      rainfall distribution over both land and ocean, and defines the layer depth of
+      the precipitation.
+
+
+      The TRMM 3B31 Monthly 5ý x 5ý Combined Rainfall product, contains Rain rate,
+      cloud liquid water, rain water, cloud ice and graupel at 14 levels for a
+      latitude band from 40 degree N to 40 degree S.  It is derived from the TRMM
+      combined algorithm (2B31), which combines data from the TMI and PR to produce
+      the best rain estimate for TRMM.
+</Abstract>
+        <KeywordList>
+          <Keyword>EARTH SCIENCE</Keyword>
+          <Keyword>ATMOSPHERE</Keyword>
+          <Keyword>PRECIPITATION</Keyword>
+          <Keyword>RAIN</Keyword>
+          <Keyword>PRECIPITATION RATE</Keyword>
+          <Keyword>TRMM</Keyword>
+          <Keyword> ESDIS</Keyword>
+          <Keyword> ESIP</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-40" maxx="180" maxy="40" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-40" maxx="180" maxy="40" />
+        <Dimension name="time" units="ISO8601"/>
+        <Extent name="time" default="2011-02-01" nearestValue="0">1997-12-01/2011-12-01</Extent>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="804" height="110">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=TRMM_3B31_MONTHLY&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>TRMM_3B42_V6_10_DAY</Name>
+        <Title>TRMM_3B42_V6_10_DAY</Title>
+        <Abstract>            The Tropical Rainfall Measuring Mission (TRMM) is a joint U.S.-Japan
+            satellite mission to monitor tropical and subtropical precipitation
+            and to estimate its associated latent heating. TRMM was successfully
+            launched on November 27, at 4:27 PM (EST) from the Tanegashima Space
+            Center in Japan.
+
+
+            The rainfall measuring instruments on the TRMM satellite include the
+            Precipitation Radar (PR), an electronically scanning radar operating
+            at 13.8 GHz; TRMM Microwave Image (TMI), a nine-channel passive
+            microwave radiometer; and Visible and Infrared Scanner (VIRS), a
+            five-channel visible/infrared radiometer.
+
+
+            The purpose of the 3B42 algorithm is to produce TRMM-adjusted
+            merged-infrared (IR) precipitation and root-mean-square (RMS)
+            precipitation-error estimates.  The algorithm consists of two separate
+            steps.  The first step uses the TRMM VIRS and TMI orbit data (TRMM
+            products 1B01 and 2A12) and the monthly TMI/TRMM Combined Instrument
+            (TCI) calibration parameters (from TRMM product 3B31) to produce
+            monthly IR calibration parameters.  The second step uses these derived
+            monthly IR calibration parameters to adjust the merged-IR
+            precipitation data, which consists of GMS, GOES-E, GOES-W, Meteosat-7,
+            Meteosat-5, and NOAA-12 data.  The final gridded, adjusted merged-IR
+            precipitation (mm/hr) and RMS precipitation-error estimates have a
+            daily temporal resolution and a 0.25-degree by 0.25-degree spatial
+            resolution.  Spatial coverage extends from 50 degrees south to 50
+            degrees north latitude.
+
+
+            The data are stored in the Hierarchical Data Format (HDF), which
+            includes both core and product specific metadata.  The file size is
+            about 0.25 MB (compressed)</Abstract>
+        <KeywordList>
+          <Keyword>EARTH SCIENCE</Keyword>
+          <Keyword>ATMOSPHERE</Keyword>
+          <Keyword>PRECIPITATION</Keyword>
+          <Keyword>RAIN</Keyword>
+          <Keyword>PRECIPITATION RATE</Keyword>
+          <Keyword>TRMM</Keyword>
+          <Keyword> ESDIS</Keyword>
+          <Keyword> ESIP</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-50" maxx="180" maxy="50" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-50" maxx="180" maxy="50" />
+        <Dimension name="time" units="ISO8601"/>
+        <Extent name="time" default="2006-01-10" nearestValue="0">1998-01-10/2011-12-31</Extent>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="748" height="110">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=TRMM_3B42_V6_10_DAY&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>TRMM_3B42_V6_3HOURLY</Name>
+        <Title>TRMM_3B42_V6_3HOURLY</Title>
+        <Abstract>      The Tropical Rainfall Measuring Mission (TRMM) is a joint U.S.-Japan
+      satellite mission to monitor tropical and subtropical precipitation
+      and to estimate its associated latent heating. TRMM was successfully
+      launched on November 27, at 4:27 PM (EST) from the Tanegashima Space
+      Center in Japan.
+
+      The rainfall measuring instruments on the TRMM satellite include the
+      Precipitation Radar (PR), an electronically scanning radar operating
+      at 13.8 GHz; TRMM Microwave Image (TMI), a nine-channel passive
+      microwave radiometer; and Visible and Infrared Scanner (VIRS), a
+      five-channel visible/infrared radiometer.
+
+      The purpose of the 3B42 algorithm is to produce TRMM-adjusted
+      merged-infrared (IR) precipitation and root-mean-square (RMS)
+      precipitation-error estimates.  The algorithm consists of two separate
+      steps.  The first step uses the TRMM VIRS and TMI orbit data (TRMM
+      products 1B01 and 2A12) and the monthly TMI/TRMM Combined Instrument
+      (TCI) calibration parameters (from TRMM product 3B31) to produce
+      monthly IR calibration parameters.  The second step uses these derived
+      monthly IR calibration parameters to adjust the merged-IR
+      precipitation data, which consists of GMS, GOES-E, GOES-W, Meteosat-7,
+      Meteosat-5, and NOAA-12 data.  The final gridded, adjusted merged-IR
+      precipitation (mm/hr) and RMS precipitation-error estimates have a
+      daily temporal resolution and a 0.25-degree by 0.25-degree spatial
+      resolution.  Spatial coverage extends from 50 degrees south to 50
+      degrees north latitude.
+
+
+      The data are stored in the Hierarchical Data Format (HDF), which
+      includes both core and product specific metadata.  The file size is
+      about 0.25 MB (compressed).</Abstract>
+        <KeywordList>
+          <Keyword>EARTH SCIENCE</Keyword>
+          <Keyword>ATMOSPHERE</Keyword>
+          <Keyword>PRECIPITATION</Keyword>
+          <Keyword>RAIN</Keyword>
+          <Keyword>PRECIPITATION RATE</Keyword>
+          <Keyword>TRMM</Keyword>
+          <Keyword> ESDIS</Keyword>
+          <Keyword> ESIP</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-50" maxx="180" maxy="50" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-50" maxx="180" maxy="50" />
+        <Dimension name="time" units="ISO8601"/>
+        <Extent name="time" default="2010-02-27 00:00:00" nearestValue="0">1998-01-01/2011-12-31</Extent>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="755" height="110">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=TRMM_3B42_V6_3HOURLY&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>TRMM_3B42_V6_DAILY</Name>
+        <Title>Daily TRMM and Others Rainfall Estimate</Title>
+        <Abstract>The Tropical Rainfall Measuring Mission (TRMM) is a joint U.S.-Japan satellite mission to monitor tropical and subtropical precipitation and to estimate its associated latent heating. TRMM was successfully launched on November 27, at 4:27 PM (EST) from the Tanegashima SpaceCenter in Japan.
+The rainfall measuring instruments on the TRMM satellite include the Precipitation Radar (PR), an electronically scanning radar operating at 13.8 GHz; TRMM Microwave Image (TMI), a nine-channel passive microwave radiometer; and Visible and Infrared Scanner (VIRS), a five-channel visible/infrared radiometer.
+The purpose of the 3B42 algorithm is to produce TRMM-adjusted merged-infrared (IR) precipitation and root-mean-square (RMS) precipitation-error estimates. The algorithm consists of two separate steps. The first step uses the TRMM VIRS and TMI orbit data (TRMM products 1B01 and 2A12) and the monthly TMI/TRMM Combined Instrument (TCI) calibration parameters (from TRMM product 3B31) to produce monthly IR calibration parameters. The second step uses these derived monthly IR calibration parameters to adjust the merged-IR precipitation data, which consists of GMS, GOES-E, GOES-W, Meteosat-7, Meteosat-5, and NOAA-12 data. The final gridded, adjusted merged-IR precipitation (mm/hr) and RMS precipitation-error estimates have a 3-hourly temporal resolution and a 0.25-degree by 0.25-degree spatial resolution. Spatial coverage extends from 50 degrees south to 50 degrees north latitude.
+The daily accumulated (beginning at 00Z and ending at 21Z; unit: mm) rainfall product is derived from this 3-hourly product. The data are stored in flat binary. The file size is about 2.25 MB (uncompressed)</Abstract>
+        <KeywordList>
+          <Keyword>EARTH SCIENCE</Keyword>
+          <Keyword>ATMOSPHERE</Keyword>
+          <Keyword>PRECIPITATION</Keyword>
+          <Keyword>RAIN</Keyword>
+          <Keyword>PRECIPITATION RATE</Keyword>
+          <Keyword>TRMM</Keyword>
+          <Keyword> ESDIS</Keyword>
+          <Keyword> ESIP</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-50" maxx="180" maxy="50" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-50" maxx="180" maxy="50" />
+        <Dimension name="time" units="ISO8601"/>
+        <Extent name="time" default="2011-02-02" nearestValue="0">1998-01-01/2011-12-31</Extent>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="741" height="110">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=TRMM_3B42_V6_DAILY&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>TRMM_3B43_V6_MONTHLY</Name>
+        <Title>TRMM_3B43_V6_MONTHLY</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-50" maxx="180" maxy="50" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-50" maxx="180" maxy="50" />
+        <Dimension name="time" units="ISO8601"/>
+        <Extent name="time" default="2011-02-01" nearestValue="0">1998-01-01/2011-12-01</Extent>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="825" height="110">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=TRMM_3B43_V6_MONTHLY&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>TRMM_3B43_V6_ACCUM</Name>
+        <Title>TRMM 3B43 monthly accumulated rain of TRMM and other data source</Title>
+        <Abstract>     The Tropical Rainfall Measuring Mission (TRMM) is a joint U.S.-Japan satellite
+      mission to monitor tropical and subtropical precipitation and to estimate its
+      associated latent heating. TRMM was successfully launched on November 27, at
+      4:27 PM (EST) from the Tanegashima Space Center in Japan.
+
+      The rainfall measuring instruments on the TRMM satellite include the
+      Precipitation Radar (PR), an electronically scanning radar operating at 13.8
+      GHz; TRMM Microwave Image (TMI), a nine-channel passive microwave radiometer;
+      and Visible and Infrared Scanner (VIRS), a five-channel visible/infrared
+      radiometer.
+
+      The purpose of 3B43 algorithm is to produce the best-estimate precipitation
+      rate (mm/hr) and root-mean-square (RMS) precipitation-error estimates from TRMM
+      and other data sources.  The algorithm combines four independent precipitation
+      fields: (1) the monthly average unclipped TRMM Microwave Imager (TMI) estimate
+      (intermediate product from Algorithm 3B42), (2) the monthly average Special
+      Sensor Microwave/Imager (SSM/I) estimate (TRMM product 3A46), (3) the
+      pentad-average adjusted merged-infrared (IR) estimate (TRMM product 3B42), and
+      (4) the monthly accumulated Climate Assessment and Monitoring System (CAMS) or
+      Global Precipitation Climatology Centre (GPCC) rain gauge analysis (TRMM
+      product 3A45).  All input data have a calendar month temporal resolution except
+      the adjusted merged-IR data, which have a daily resolution.  To obtain the
+      requisite calendar month average of adjusted merged-IR data, the 3B43 algorithm
+      averages the adjusted merged-IR daily data that span the calendar month of
+      interest.  Also, the monthly average unclipped TMI data, prior to their
+      combination with the SSM/I, adjusted merged-IR, and rain gauge data, are
+      converted (calibrated) to TRMM Combined Instrument (TCI) data, using the
+      TMI/TCI calibration parameters (from TRMM product 3B31).  After the
+      preprocessing is complete, the four independent precipitation fields are merged
+      together to form the best-estimate precipitation rate and RMS
+      precipitation-error estimates.  These gridded estimates have a calendar month
+      temporal resolution and a 0.25-degree by 0.25-degree spatial resolution.  Spatial
+      coverage extends from 50 degrees south to 50 degrees north latitude.
+
+      The data are stored in the Hierarchical Data Format (HDF), which includes both
+      core and product specific metadata.  The file size is about 0.28 MB
+      (compressed).</Abstract>
+        <KeywordList>
+          <Keyword>EARTH SCIENCE</Keyword>
+          <Keyword>ATMOSPHERE</Keyword>
+          <Keyword>PRECIPITATION</Keyword>
+          <Keyword>RAIN</Keyword>
+          <Keyword>PRECIPITATION RATE</Keyword>
+          <Keyword>TRMM</Keyword>
+          <Keyword> ESDIS</Keyword>
+          <Keyword> ESIP</Keyword>
+          <Keyword> MONTHLY</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-50" maxx="180" maxy="50" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-50" maxx="180" maxy="50" />
+        <Dimension name="time" units="ISO8601"/>
+        <Extent name="time" default="2008-06-01" nearestValue="0">1998-01-01/2010-12-01</Extent>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="874" height="110">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=TRMM_3B43_V6_ACCUM&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>TRMM_CSH_MONTHLY</Name>
+        <Title>TRMM Monthly Convective and Stratiform Heating</Title>
+        <Abstract>       The average operating altitude for TRMM was changed from 350 to 403 km during the period of August 7-24, 2001. This orbit boost maneuver extended the mission life significantly. All post-boost data products had been released by the TRMM Science Project, as of early December 2001. All TRMM data products (post- and pre-boost) are available via the TRMM data search-and-order system at http://disc.gsfc.nasa.gov/data/datapool/TRMM_DP/01_Data_Products/02_Gridded/09_Monthly_Heating_CSH/index.html. The time period before August 7, 2001 is referred to as pre-boost, and the time period after August 24, 2001 is referred to as post-boost.</Abstract>
+        <KeywordList>
+          <Keyword>EARTH SCIENCE</Keyword>
+          <Keyword>ATMOSPHERE</Keyword>
+          <Keyword>PRECIPITATION</Keyword>
+          <Keyword>RAIN</Keyword>
+          <Keyword>PRECIPITATION RATE</Keyword>
+          <Keyword>TRMM</Keyword>
+          <Keyword> ESDIS</Keyword>
+          <Keyword> ESIP</Keyword>
+          <Keyword> MONTHLY</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-40" maxx="180" maxy="40" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-40" maxx="180" maxy="40" />
+        <Dimension name="time" units="ISO8601"/>
+        <Extent name="time" default="2011-01-01" nearestValue="0">1997-12-01/2011-12-01</Extent>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="797" height="110">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=TRMM_CSH_MONTHLY&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>TRMM_3B42RT_CURRENT</Name>
+        <Title>TRMM_3B42RT_CURRENT</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-50" maxx="180" maxy="50" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-50" maxx="180" maxy="50" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="755" height="110">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=TRMM_3B42RT_CURRENT&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>TRMM_G2A12_A</Name>
+        <Title>TRMM 2A12 Surface Rain Rate Ascending (0.5 degree)</Title>
+        <Abstract></Abstract>
+        <KeywordList>
+          <Keyword></Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-40" maxx="180" maxy="40" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-40" maxx="180" maxy="40" />
+        <Dimension name="time" units="ISO8601"/>
+        <Extent name="time" default="2010-01-31" nearestValue="0">2008-05-01/2010-01-31</Extent>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>TRMM_G2A12_D</Name>
+        <Title>TRMM 2A12 Surface Rain Rate Descending (0.5 degree)</Title>
+        <Abstract></Abstract>
+        <KeywordList>
+          <Keyword></Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-40" maxx="180" maxy="40" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-40" maxx="180" maxy="40" />
+        <Dimension name="time" units="ISO8601"/>
+        <Extent name="time" default="2010-01-31" nearestValue="0">2008-05-01/2010-01-31</Extent>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>TRMM_G2B31_A</Name>
+        <Title>TRMM 2B31 Surface Rain Rate Ascending (0.1 degree)</Title>
+        <Abstract></Abstract>
+        <KeywordList>
+          <Keyword></Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-40" maxx="180" maxy="40" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-40" maxx="180" maxy="40" />
+        <Dimension name="time" units="ISO8601"/>
+        <Extent name="time" default="2010-01-31" nearestValue="0">2008-05-01/2010-01-31</Extent>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>TRMM_G2B31_D</Name>
+        <Title>TRMM 2B31 Surface Rain Rate Descending (0.1 degree)</Title>
+        <Abstract></Abstract>
+        <KeywordList>
+          <Keyword></Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-40" maxx="180" maxy="40" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-40" maxx="180" maxy="40" />
+        <Dimension name="time" units="ISO8601"/>
+        <Extent name="time" default="2010-01-31" nearestValue="0">2008-05-01/2010-01-31</Extent>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>grid60</Name>
+        <Title>GRID 60 degrees</Title>
+        <Abstract>Grid lines every 60 degrees</Abstract>
+        <KeywordList>
+          <Keyword>GRIDS</Keyword>
+          <Keyword>GRATICULE</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="692" height="110">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=grid60&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>grid30</Name>
+        <Title>GRID 30 degrees</Title>
+        <Abstract>Grid lines every 30 degrees</Abstract>
+        <KeywordList>
+          <Keyword>GRIDS</Keyword>
+          <Keyword>GRATICULE</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="692" height="110">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=grid30&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>grid10</Name>
+        <Title>GRID 10 degrees</Title>
+        <Abstract>Grid lines every 10 degrees</Abstract>
+        <KeywordList>
+          <Keyword>GRIDS</Keyword>
+          <Keyword>GRATICULE</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="692" height="110">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=grid10&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>coastline</Name>
+        <Title>coastlines</Title>
+        <Abstract>World Boundary coastline</Abstract>
+        <KeywordList>
+          <Keyword>Tiger/Line</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>coast_line</Name>
+        <Title>coastlines</Title>
+        <Abstract>World Boundary coastline</Abstract>
+        <KeywordList>
+          <Keyword>Tiger/Line</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>countries</Name>
+        <Title>countries</Title>
+        <Abstract>World Countries</Abstract>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>continents</Name>
+        <Title>continents</Title>
+        <Abstract>World Continents</Abstract>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>VolcanoesSince2000</Name>
+        <Title>Volcanoes with Eruptions since 2000</Title>
+        <Abstract>Volcanoes with eruptions since 2000, obtained from a compilation by the Smithsonian Institution, Global Volcanism Program</Abstract>
+        <KeywordList>
+          <Keyword>volcano</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>VolcanoesSince2000_white</Name>
+        <Title>Volcanoes with Eruptions since 2000</Title>
+        <Abstract>Volcanoes with eruptions since 2000, obtained from a compilation by the Smithsonian Institution, Global Volcanism Program</Abstract>
+        <KeywordList>
+          <Keyword>volcano</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>bluemarble</Name>
+        <Title>bluemarble</Title>
+        <Abstract>The Blue Marble: Next Generation is a series of images that show the color of the Earth\u2019s surface for each month of 2004 at very high resolution (500 meters/pixel) at a global scale. </Abstract>
+        <KeywordList>
+          <Keyword>Bluemarble</Keyword>
+          <Keyword>MODIS</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+  </Layer>
+</Capability>
+</WMT_MS_Capabilities>
